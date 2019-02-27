@@ -1,0 +1,69 @@
+.card {
+    padding: .24rem .22rem;
+    border-bottom: 1px solid #f5f7f9;
+}
+
+.card .info {
+    flex: 2 2 auto;
+}
+.card .title {
+    font-weight: normal;
+    max-height: .9rem;
+    overflow: hidden;
+    line-height: .45rem;
+    font-size: .34rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    word-break: break-word;
+    padding-right: .12rem;
+}
+.card .detail {
+    color: #b4b4b4;
+    line-height: .34rem;
+    height: .34rem;
+    margin-top: .15rem;
+    font-size: 0;
+    letter-spacing: 0;
+    overflow: hidden;
+}
+.card .detail span {
+    font-size: .24rem;
+    margin-right: .12rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card .detail:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+.card a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.card .source {
+    text-overflow: ellipsis;
+    max-width: 8em;
+}
+
+.card .pic {
+    width: 2.34rem;
+    height: 1.46rem;
+    flex: 0 0 auto;
+}
+
+.card .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}

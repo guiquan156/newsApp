@@ -1,0 +1,10 @@
+
+.newsList {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 50px;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 50px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
+    padding-top: 50px;
+}
