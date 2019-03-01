@@ -24,9 +24,13 @@ class Index extends React.Component<Props, State> {
         };
     }
 
-    async componentWillMount () {
+    componentWillMount () {
         const { dispatch } = this.props;
-        dispatch({type: 'topHeadlines/fetch'});
+        const { articles } = this.props;
+
+        if (!articles.length) {
+            dispatch({type: 'topHeadlines/fetch'});
+        }
     }
 
     render () {

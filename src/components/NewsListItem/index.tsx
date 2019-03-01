@@ -1,15 +1,6 @@
 import React from 'react';
+import Link from 'umi/link';
 import styles from './NewsListItem.css';
-
-type Article = {
-    title: string;
-    source: {
-        id: string;
-        name: string;
-    };
-    publishedAt: string;
-    urlToImage: string;
-};
 
 export interface NewsListItemProps extends React.Props<any> {
     article: Article;
@@ -48,19 +39,18 @@ export default class NewsListItem extends React.Component<NewsListItemProps> {
         const { article } = this.props;
         return (
             <article className={styles.card}>
-                <a href="">
+                <Link to={`/detail/${article.id}`}>
                     <div className={styles.info}>
                         <h3 className={styles.title}>{article.title}</h3>
                         <div className={styles.detail}>
                             <span className={styles.source}>{article.source.name}</span>
                             <span className={styles.pubtime}>{this.formatTime(article.publishedAt)}</span>
-                            {/* <span className={styles.reply}>510跟贴</span> */}
                         </div>
                     </div>
                     <div className={styles.pic}>
                         <img src={article.urlToImage} alt="" />
                     </div>
-                </a>
+                </Link>
             </article>
         );
     }
